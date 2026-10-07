@@ -78,9 +78,12 @@ class Provider {
     const settles = await Promise.allSettled(tasks);
     const combined = [];
 
-    for (const r of settles) {
+    for (let i = 0; i < settles.length; i++) {
+      const r = settles[i];
       if (r.status === "fulfilled" && Array.isArray(r.value)) {
-        combined.push(...r.value);
+        for (let j = 0; j < r.value.length; j++) {
+          combined.push(r.value[j]);
+        }
       }
     }
 
@@ -117,7 +120,7 @@ class Provider {
 
         results.push({
           id: "mangadex::" + item.id,
-          title: `[MangaDex] ${title}`,
+          title: "[MangaDex] " + title,
           synonyms: (attr.altTitles || []).flatMap(x => Object.values(x || {})).filter(Boolean),
           year: attr.year ? Number(attr.year) : 0,
           image: coverUrl
@@ -140,12 +143,12 @@ class Provider {
       const a = $(el).find(".story-title a, h3 a, .title_story a").first();
       const title = a.text().trim();
       const href = a.attr("href");
-      const img = $(el).find("img").attr("src") \vert{}\vert{} $(el).find("img").attr("data-src") || "";
+      const img = $(el).find("img").attr("src") || $(el).find("img").attr("data-src") || "";
 
       if (href && title) {
         list.push({
           id: "truyenqq::" + href.replace(src.base, ""),
-          title: `[TruyenQQ] ${title}`,
+          title: "[TruyenQQ] " + title,
           url: href.startsWith("http") ? href : src.base + href,
           image: img.startsWith("http") ? img : (src.base + img)
         });
@@ -170,7 +173,7 @@ class Provider {
       if (href && title) {
         list.push({
           id: "otakusan::" + href.replace(src.base, ""),
-          title: `[OtakuSan] ${title}`,
+          title: "[OtakuSan] " + title,
           url: href.startsWith("http") ? href : src.base + href,
           image: img.startsWith("http") ? img : (src.base + img)
         });
@@ -190,12 +193,12 @@ class Provider {
       const a = $(el).find(".title a, h3 a").first();
       const title = a.text().trim();
       const href = a.attr("href");
-      const img = $(el).find("img").attr("src") \vert{}\vert{} $(el).find("img").attr("data-src") || "";
+      const img = $(el).find("img").attr("src") || $(el).find("img").attr("data-src") || "";
 
       if (href && title) {
         list.push({
           id: "moetruyen::" + href.replace(src.base, ""),
-          title: `[MoeTruyen] ${title}`,
+          title: "[MoeTruyen] " + title,
           url: href.startsWith("http") ? href : src.base + href,
           image: img.startsWith("http") ? img : (src.base + img)
         });
@@ -300,7 +303,7 @@ class Provider {
     const $ = LoadDoc(html);
     const chapters = [];
     $(".chapter-list li, .list-chapters a").each((i, el) => {
-      const a = el.name === "a" ? $(el) :$(el).find("a").first();
+      const a = el.name === "a" ? $(el) : $(el).find("a").first();
       const href = a.attr("href");
       const title = a.text().trim();
 
@@ -423,5 +426,4 @@ class Provider {
   }
 }
 
-// Khởi tạo instance cho runtime Seanime
 var payload = new Provider();
