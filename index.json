@@ -2,8 +2,9 @@
   {
     "id": "vn-manga-ultimate",
     "name": "Manga VN Ultimate (MangaDex + Multi VN)",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "manifestURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/vn-manga-ultimate/manifest.json",
+    "payloadURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/vn-manga-ultimate/payload.js",
     "language": "javascript",
     "lang": "vi",
     "type": "manga-provider",
