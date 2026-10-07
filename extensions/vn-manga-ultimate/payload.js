@@ -434,5 +434,6 @@ class Provider {
     return pages;
   }
 }
-// Thêm vào dòng cuối cùng của payload.js
+
+// Khởi tạo instance cho Seanime
 var payload = new Provider();
