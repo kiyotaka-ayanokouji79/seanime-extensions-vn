@@ -2,11 +2,9 @@
 
 class Provider {
   constructor() {
-    // MangaDex bypass config
     this.mdRawApi = "https://api.mangadex.org";
     this.imgProxy = "https://images.weserv.nl/?url=";
 
-    // Các web cào trực tiếp
     this.sources = {
       truyenqq: {
         name: "TruyenQQ",
@@ -66,9 +64,6 @@ class Provider {
     }
   }
 
-  /**
-   * 1. SEARCH: Gọi song song MangaDex + Các website Việt Nam
-   */
   async search(opts) {
     const q = (opts && opts.query ? opts.query : "").trim();
     if (!q) return [];
@@ -209,9 +204,6 @@ class Provider {
     return list;
   }
 
-  /**
-   * 2. FIND CHAPTERS (Điều phối theo prefix: mangadex:: / truyenqq:: / otakusan:: / moetruyen::)
-   */
   async findChapters(id) {
     const parts = id.split("::");
     const sourceKey = parts[0];
@@ -370,9 +362,6 @@ class Provider {
     return chapters;
   }
 
-  /**
-   * 3. FIND CHAPTER PAGES: Xử lý link ảnh MangaDex (weserv) hoặc các site VN (Referer)
-   */
   async findChapterPages(id) {
     const parts = id.split("::");
     const sourceKey = parts[0];
@@ -399,7 +388,6 @@ class Provider {
       }
     }
 
-    // Xử lý các trang web Việt Nam
     const src = this.sources[sourceKey];
     if (!src) return [];
 
@@ -435,5 +423,5 @@ class Provider {
   }
 }
 
-// Khởi tạo instance cho Seanime
+// Khởi tạo instance cho runtime Seanime
 var payload = new Provider();
