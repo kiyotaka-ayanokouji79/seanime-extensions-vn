@@ -3,10 +3,10 @@
   "description": "Kho tiện ích mở rộng Manga tiếng Việt cho Seanime",
   "manifestURIs": [
     "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/mangadex-vn/manifest.json",
-    "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/truyenqq/manifest.json"
+    "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/moetruyen/manifest.json"
   ],
   "urls": [
     "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/mangadex-vn/manifest.json",
-    "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/truyenqq/manifest.json"
+    "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/moetruyen/manifest.json"
   ]
 }
