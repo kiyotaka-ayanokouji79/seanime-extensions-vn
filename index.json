@@ -1,13 +1,28 @@
-{
-  "id": "vn-manga-ultimate",
-  "name": "Manga VN Ultimate",
-  "version": "1.0.2",
-  "manifestURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/vn-manga-ultimate/manifest.json",
-  "payloadURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/vn-manga-ultimate/payload.js",
-  "language": "javascript",
-  "lang": "vi",
-  "type": "manga-provider",
-  "description": "Nguồn truyện tranh tiếng Việt kết hợp MangaDex và các web dịch Việt Nam",
-  "author": "Hung",
-  "payload": "payload.js"
-}
+[
+  {
+    "id": "mangadex-vn",
+    "name": "MangaDex (Tiếng Việt)",
+    "version": "1.0.0",
+    "manifestURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/mangadex-vn/manifest.json",
+    "payloadURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/mangadex-vn/payload.js",
+    "language": "javascript",
+    "lang": "vi",
+    "type": "manga-provider",
+    "description": "Đọc manga tiếng Việt từ MangaDex",
+    "author": "Hung",
+    "payload": "payload.js"
+  },
+  {
+    "id": "truyenqq",
+    "name": "TruyenQQ",
+    "version": "1.0.0",
+    "manifestURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/truyenqq/manifest.json",
+    "payloadURI": "https://raw.githubusercontent.com/kiyotaka-ayanokouji79/seanime-extensions-vn/main/extensions/truyenqq/payload.js",
+    "language": "javascript",
+    "lang": "vi",
+    "type": "manga-provider",
+    "description": "Nguồn truyện tranh tiếng Việt từ TruyenQQ",
+    "author": "Hung",
+    "payload": "payload.js"
+  }
+]
