@@ -434,3 +434,5 @@ class Provider {
     return pages;
   }
 }
+// Thêm vào dòng cuối cùng của payload.js
+var payload = new Provider();
